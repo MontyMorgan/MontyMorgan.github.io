@@ -1,33 +1,22 @@
-# Monty Morgan — Portfolio website
+# Monty Morgan portfolio — GitHub Pages
 
-Responsive static portfolio with plain HTML, CSS and JavaScript. No build step required.
+Upload index.html, styles.css, script.js and the entire assets folder to the root of your GitHub Pages repository, replacing the earlier files. Keep the assets directory intact. No build or installation is needed. In repository Settings → Pages, choose Deploy from a branch, main, /(root), then Save if Pages is not already configured.
 
-## Preview on your computer
+## Activate email delivery (required once)
+The contact form sends first name, last name, email, optional phone, and message to montymorgan.nsolbpo@gmail.com using FormSubmit. After publishing, submit a real test message from the live website. Open the activation email in that mailbox and confirm the form; check Spam if needed. Then send a second test and verify all fields arrive. Reply to that email to contact the visitor. Delivery cannot be confirmed until you activate and test it. No email password or API secret is included in this website.
 
-Open `index.html` in a browser. For more reliable local preview, use VS Code with its Live Server extension.
+Visitors complete FormSubmit’s default anti-spam/confirmation flow after submitting. The form uses native browser validation and a honeypot. It states that FormSubmit processes the submitted details. No messages are sent automatically when opening the website.
 
-## Before publishing
+## Editing
+Edit index.html for text, company links or the recipient email (update both the form action and email links). Edit styles.css for the appearance. The supplied technology image is assets/technology-blue.png; it is low resolution, so it will look softer when enlarged. The supplied employer logo is assets/nsol-bpo.png. The original M.M text mark is used as a subtle hero watermark.
 
-- Email is confirmed as `montymorgan.nsolbpo@gmail.com` and updated in the website.
-- Previous roles were Sales Closer and Team Leader across prior companies. The specific role-to-company mapping and dates remain unspecified; confirm before adding more detail.
-- Replace generic capability examples with authorized, real work samples when available.
-- School and formal education details are intentionally excluded at the owner’s request.
-- Test website on mobile and check links.
+Company links: NSOL BPO, Touchstone BPO, Axxon BPO and Errands Services open in new tabs.
 
-## Free hosting option: GitHub Pages
+## Service pages
+Upload all four additional HTML pages alongside index.html. Service cards at the beginning of the homepage open these pages. The personal M.M mark is fixed to the viewport center across all pages and does not intercept clicks. The homepage hero heading is green as requested.
 
-1. Create a GitHub account or sign in.
-2. Create a PUBLIC repository, e.g. `monty-morgan-portfolio`.
-3. Upload `index.html`, `styles.css`, `script.js` (and optionally this README) to the repo ROOT (not a nested folder).
-4. Open repository Settings > Pages.
-5. Under Build and deployment choose "Deploy from a branch", `main`, `/ (root)` and Save.
-6. After deployment, your public link will be similar to `https://YOUR-USERNAME.github.io/monty-morgan-portfolio/`. Use the actual link GitHub shows.
+## Capability pages
+The three What I can bring to a team cards now link to sales-conversations.html, crm-va-workflows.html and social-content-support.html. Upload these files with all the other HTML pages. Past-experience descriptions use the background already supplied; no client results or case studies have been invented.
 
-## Alternative: Netlify Drop
-
-Go to https://app.netlify.com/drop, sign in if requested, and drag the extracted `monty-portfolio` folder containing `index.html`. Netlify will provide a site URL. Configure a memorable site name if available.
-
-## Files
-- `index.html`: page structure and text
-- `styles.css`: styling and mobile layout
-- `script.js`: mobile navigation and footer year
+## Animated background mark
+The centered M.M watermark gently pulses in a heartbeat rhythm. It appears brighter over dark sections and black shaded over white sections. Navigation and footer M.M logos scroll to the current page top. The decorative background mark ignores clicks to keep the content below accessible. Reduced-motion preferences disable the animation.
