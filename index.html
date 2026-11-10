@@ -1,63 +1,612 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Monty Morgan — Sales Closer, Cold Calling Professional and Executive Virtual Assistant. Explore experience, skills and services." />
-  <meta name="theme-color" content="#041725" />
-  <title>Monty Morgan | Sales Closer & Executive Virtual Assistant</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monty Morgan | Sales Closer &amp; Executive Virtual Assistant</title>
+<meta name="description" content="Monty Morgan — sales closer, cold-calling professional and Executive Virtual Assistant. Explore experience, skills and services.">
+<meta name="theme-color" content="#07111f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Monty Morgan | Sales Closer &amp; Executive Virtual Assistant">
+<meta property="og:description" content="Conversations that create opportunity. Sales, outreach and executive virtual support.">
+<meta property="og:url" content="https://montymorgan.github.io/">
+<link rel="canonical" href="https://montymorgan.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307111f'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23e3b95f' text-anchor='middle'%3EM.M%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-950:#050d18;--navy-900:#07111f;--navy-800:#0b1b30;--navy-700:#12284a;--navy-600:#1b3a63;
+  --gold:#e3b95f;--gold-soft:#f1d9a0;--gold-deep:#a97c24;
+  --ivory:#f7f3ea;--ivory-2:#efe9db;--paper:#fffdf8;
+  --ink:#0c1a2c;--muted:#56637a;--line:rgba(12,26,44,.12);
+  --blink:4.8s;
+  --serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --radius:18px;--shadow:0 24px 60px -24px rgba(5,13,24,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 16px/1.7 var(--sans);color:var(--ink);background:var(--ivory);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+img{max-width:100%;display:block}
+::selection{background:var(--gold);color:var(--navy-900)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.container{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.skip-link{position:absolute;left:12px;top:-80px;background:var(--gold);color:var(--navy-900);padding:10px 16px;border-radius:8px;font-weight:700;z-index:2000}
+.skip-link:focus{top:12px}
+
+/* ---------- Brand monogram ---------- */
+.logo{display:inline-flex;align-items:center;gap:12px;color:#fff}
+.mono{position:relative;display:inline-grid;place-items:center;width:50px;height:50px;border-radius:14px;
+  background:linear-gradient(145deg,#16335a,#0a182b);border:1px solid rgba(227,185,95,.55);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 8px 22px -8px rgba(227,185,95,.55)}
+.mono::after{content:"";position:absolute;inset:4px;border-radius:10px;border:1px solid rgba(227,185,95,.22)}
+.mono b{font:700 19px/1 var(--serif);letter-spacing:-.04em;background:linear-gradient(180deg,#fff3d1,var(--gold) 60%,#b98a2f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mono i{font-style:normal;color:var(--gold);margin:0 1px;font-weight:800}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text strong{font:700 15px var(--serif);letter-spacing:.01em}
+.logo-text small{font-size:9.5px;letter-spacing:.24em;color:var(--gold-soft);opacity:.85;font-weight:700;margin-top:3px}
+
+/* ---------- Navbar (textured, high contrast) ---------- */
+.site-header{position:sticky;top:0;z-index:50;
+  background:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 1px,transparent 1px 7px),
+    radial-gradient(120% 220% at 15% -60%,rgba(227,185,95,.16),transparent 55%),
+    linear-gradient(180deg,#0b1b30,#06101d);
+  border-bottom:1px solid rgba(227,185,95,.45);box-shadow:0 12px 30px -14px rgba(0,0,0,.6)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{position:relative;padding:10px 15px;font-size:13.5px;font-weight:700;color:#e9e1cf;letter-spacing:.02em;border-radius:8px;transition:color .2s,background .2s}
+.nav-links a:not(.nav-cta)::after{content:"";position:absolute;left:15px;right:15px;bottom:5px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-links .nav-cta{margin-left:10px;background:linear-gradient(180deg,#f0cd7e,var(--gold));color:var(--navy-900);padding:11px 20px;box-shadow:0 8px 20px -8px rgba(227,185,95,.8)}
+.nav-links .nav-cta:hover{color:var(--navy-900);transform:translateY(-1px)}
+.menu-toggle{display:none;width:46px;height:44px;border:1px solid rgba(227,185,95,.5);background:rgba(255,255,255,.04);border-radius:10px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.menu-toggle span{width:22px;height:2px;background:var(--gold);transition:transform .3s,opacity .3s}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ---------- Blinking watermark (same rhythm as the NSOL badge) ---------- */
+.watermark{position:fixed;top:50%;left:50%;z-index:20;transform:translate(-50%,-50%);pointer-events:none;user-select:none;
+  font:700 clamp(170px,30vw,500px)/1 var(--serif);letter-spacing:-.07em;white-space:nowrap;
+  animation:mm-blink var(--blink) ease-in-out infinite;transition:color .6s ease,text-shadow .6s ease}
+.watermark i{font-style:normal;font-weight:500;margin:0 .02em}
+.watermark.on-dark{color:var(--gold-soft);text-shadow:0 0 90px rgba(227,185,95,.35)}
+.watermark.on-light{color:var(--navy-700);text-shadow:none}
+@keyframes mm-blink{0%,100%{opacity:.05}50%{opacity:.17}}
+
+/* ---------- Floating NSOL BPO badge ---------- */
+.employer{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:11px;padding:9px 15px 9px 10px;
+  background:rgba(255,255,255,.97);border:1px solid rgba(12,26,44,.12);border-radius:14px;color:var(--navy-900);
+  box-shadow:0 10px 26px rgba(5,13,24,.28),0 2px 6px rgba(5,13,24,.18);animation:badge-blink var(--blink) ease-in-out infinite;
+  transition:transform .25s,box-shadow .25s}
+.employer:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(5,13,24,.34)}
+@keyframes badge-blink{0%,100%{opacity:.6}50%{opacity:1}}
+.employer-logo{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(145deg,#12284a,#0a182b);overflow:hidden;flex:none}
+.employer-logo img{width:100%;height:100%;object-fit:contain;background:#fff;display:none}
+.employer-logo.has-logo img{display:block}
+.employer-logo.has-logo span{display:none}
+.employer-logo span{font:800 11px var(--sans);color:var(--gold);letter-spacing:.04em}
+.employer-text{display:flex;flex-direction:column;line-height:1.15}
+.employer-text small{font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:#6a7589;font-weight:700}
+.employer-text strong{font-size:13px;font-weight:800;letter-spacing:.02em}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:12px;border:1px solid transparent;font-weight:800;font-size:14px;letter-spacing:.02em;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-gold{background:linear-gradient(180deg,#f3d284,var(--gold));color:var(--navy-900);box-shadow:0 14px 28px -12px rgba(227,185,95,.75)}
+.btn-ghost{border-color:rgba(255,255,255,.3);color:#fff;background:rgba(255,255,255,.04)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* ---------- Hero ---------- */
+section{position:relative}
+.hero{color:#fff;overflow:hidden;isolation:isolate;
+  background:
+    linear-gradient(180deg,rgba(5,13,24,.72),rgba(7,17,31,.9)),
+    url('hero.jpg') center/cover no-repeat,
+    radial-gradient(60% 80% at 82% 18%,rgba(27,58,99,.9),transparent 60%),
+    radial-gradient(50% 60% at 8% 92%,rgba(169,124,36,.28),transparent 60%),
+    var(--navy-900)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:56px 56px;-webkit-mask-image:radial-gradient(75% 75% at 60% 40%,#000,transparent);mask-image:radial-gradient(75% 75% at 60% 40%,#000,transparent)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding-block:96px 110px;min-height:720px}
+.eyebrow{display:inline-flex;align-items:center;gap:11px;padding:8px 16px;border:1px solid rgba(227,185,95,.4);border-radius:100px;background:rgba(227,185,95,.08);font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--gold-soft)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(227,185,95,.18)}
+.hero h1{font:500 clamp(42px,5.6vw,76px)/1.06 var(--serif);letter-spacing:-.03em;margin:26px 0 22px}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:400}
+.hero p.lede{max-width:560px;color:#c5cfdd;font-size:17px;line-height:1.85;margin:0}
+.hero p.lede strong{color:#fff}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:34px 0 48px}
+.hero-meta{display:flex;gap:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
+.hero-meta strong{display:block;font:600 28px var(--serif);color:#fff}
+.hero-meta small{font-size:12px;color:#9fb0c7;letter-spacing:.04em}
+
+.hero-art{position:relative;display:grid;place-items:center;min-height:520px}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(227,185,95,.25)}
+.ring.r1{width:470px;height:470px;animation:spin 60s linear infinite;border-style:dashed}
+.ring.r2{width:390px;height:390px;border-color:rgba(255,255,255,.1)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.photo-frame{position:relative;width:min(340px,76vw);aspect-ratio:4/5;border-radius:200px 200px 28px 28px;padding:10px;
+  background:linear-gradient(160deg,var(--gold-soft),var(--gold) 45%,#7d5a18);box-shadow:0 40px 80px -20px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.15) inset}
+.photo-inner{position:relative;width:100%;height:100%;border-radius:192px 192px 20px 20px;overflow:hidden;background:linear-gradient(170deg,#16335a,#0a182b)}
+.photo-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
+.photo-frame.has-photo .photo-inner img{display:block}
+.photo-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:10px;padding:0 24px 34px;text-align:center;color:#c7d3e4}
+.photo-frame.has-photo .photo-placeholder{display:none}
+.photo-placeholder svg{width:78%;height:auto;opacity:.5;margin-bottom:-4px}
+.photo-placeholder strong{font:600 15px var(--serif);color:#fff;letter-spacing:.02em}
+.photo-placeholder span{font-size:11px;letter-spacing:.14em;color:var(--gold-soft)}
+.chip{position:absolute;display:flex;align-items:center;gap:10px;padding:11px 16px;border-radius:14px;background:rgba(10,24,43,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(227,185,95,.35);box-shadow:0 18px 36px -14px rgba(0,0,0,.6);font-size:12px;font-weight:700;color:#fff;animation:float 6s ease-in-out infinite}
+.chip small{display:block;font-weight:600;color:#9fb0c7;font-size:10.5px;letter-spacing:.04em}
+.chip .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(227,185,95,.16);color:var(--gold);font-size:16px}
+.chip.c1{left:-4%;top:16%}
+.chip.c2{right:-2%;bottom:14%;animation-delay:-3s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* ---------- Ticker ---------- */
+.ticker{background:linear-gradient(90deg,#c99a3d,var(--gold) 40%,#f0d08a 60%,#c99a3d);overflow:hidden;padding:17px 0;border-block:1px solid rgba(7,17,31,.25)}
+.ticker-track{display:flex;width:max-content;animation:marquee 34s linear infinite}
+.ticker-track span{padding:0 26px;white-space:nowrap;font:800 12px var(--sans);letter-spacing:.2em;color:var(--navy-900)}
+.ticker-track span.sep{padding:0;opacity:.6}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ---------- Sections ---------- */
+.section{padding-block:120px}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:800;letter-spacing:.24em;color:var(--gold-deep)}
+.kicker::before{content:"";width:34px;height:1px;background:currentColor}
+.section h2{font:500 clamp(34px,4.4vw,58px)/1.1 var(--serif);letter-spacing:-.025em;margin:18px 0 54px;max-width:860px}
+.section h2 em{font-style:italic;color:var(--gold-deep);font-weight:400}
+.tone-dark{background:linear-gradient(180deg,var(--navy-800),var(--navy-900));color:#fff}
+.tone-dark .kicker{color:var(--gold)}
+.tone-dark h2 em{color:var(--gold)}
+.tone-alt{background:var(--ivory-2)}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}
+.lead{font:500 clamp(24px,2.6vw,33px)/1.4 var(--serif);letter-spacing:-.015em;margin:0}
+.lead em{color:var(--gold-deep)}
+.about-text p{margin:0 0 18px;color:var(--muted);line-height:1.9}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.about-stats div{padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
+.about-stats strong{display:block;font:600 24px var(--serif)}
+.about-stats small{font-size:12px;color:var(--muted)}
+
+/* service cards */
+.expertise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+.skill{border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.skill:hover,.skill[open]{transform:translateY(-5px);border-color:rgba(227,185,95,.55);box-shadow:0 26px 50px -24px rgba(0,0,0,.7)}
+.skill summary{list-style:none;cursor:pointer;display:block;padding:26px 24px 24px;min-height:300px;position:relative}
+.skill summary::-webkit-details-marker{display:none}
+.idx{font-size:11px;letter-spacing:.2em;color:#8ea3bf;font-weight:700}
+.skill .ico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;margin:24px 0 20px;font-size:24px;color:var(--gold);background:rgba(227,185,95,.12);border:1px solid rgba(227,185,95,.3)}
+.skill h3{font:600 20px/1.25 var(--serif);margin:0 0 10px}
+.skill p{margin:0;font-size:14px;line-height:1.75;color:#b4c2d6}
+.tag{position:absolute;left:24px;bottom:50px;font-size:9.5px;letter-spacing:.18em;font-weight:800;color:var(--gold)}
+.more{position:absolute;left:24px;bottom:22px;font-size:12px;font-weight:700;color:#e5ecf6}
+.more::after{content:" +";color:var(--gold)}
+.skill[open] .more::after{content:" −"}
+.extra{padding:20px 24px 24px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;color:#c6d2e2;line-height:1.75}
+.extra p{margin:0}
+.extra a{display:inline-block;margin-top:12px;font-weight:800;color:var(--gold)}
+.toolkit{margin-top:56px;padding-top:34px;border-top:1px solid rgba(255,255,255,.14)}
+.toolkit-label{font-size:11px;letter-spacing:.22em;font-weight:800;color:#8ea3bf}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.chips span{padding:9px 17px;border-radius:100px;border:1px solid rgba(227,185,95,.35);background:rgba(227,185,95,.07);font-size:13px;font-weight:600;color:#f3ead3}
+
+/* timeline */
+.exp-intro{display:flex;justify-content:space-between;align-items:end;gap:30px;margin:-26px 0 40px}
+.exp-intro p{max-width:600px;margin:0;color:var(--muted)}
+.timeline{position:relative;border-left:2px solid var(--line);margin-left:9px}
+.t-item{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;padding:26px 28px;margin:0 0 14px 34px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);transition:transform .3s,box-shadow .3s,border-color .3s}
+.t-item:hover{transform:translateX(6px);box-shadow:var(--shadow);border-color:rgba(169,124,36,.5)}
+.t-item::before{content:"";position:absolute;left:-44px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--gold);border:4px solid var(--ivory);box-shadow:0 0 0 1px var(--gold-deep)}
+.t-type{font-size:10.5px;letter-spacing:.2em;font-weight:800;color:var(--gold-deep)}
+.t-item h3{font:600 24px var(--serif);margin:4px 0 2px}
+.t-item p{margin:0;color:var(--muted);font-size:14.5px}
+.t-arrow{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--navy-700);transition:background .25s,color .25s}
+.t-item:hover .t-arrow{background:var(--navy-800);color:var(--gold)}
+
+/* capabilities */
+.work-intro{max-width:660px;margin:-30px 0 40px;color:var(--muted)}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.work{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.work:hover,.work[open]{transform:translateY(-5px);box-shadow:var(--shadow)}
+.work summary{list-style:none;cursor:pointer;display:block}
+.work summary::-webkit-details-marker{display:none}
+.visual{height:220px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;position:relative;overflow:hidden}
+.visual::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.05) 0 1px,transparent 1px 9px)}
+.v1{background:radial-gradient(circle at 78% 80%,#2c6c64,#10372f 60%,#0a211c)}
+.v2{background:radial-gradient(circle at 78% 80%,#3b69a8,#182e57 65%,#0d1a33)}
+.v3{background:radial-gradient(circle at 78% 80%,#a1604e,#5a2b3d 65%,#34162a)}
+.visual span.lbl{position:relative;z-index:1;font-size:10px;letter-spacing:.2em;font-weight:800;color:#f1e3bb}
+.visual span.num{position:relative;z-index:1;font:500 96px/1 var(--serif);letter-spacing:-.06em;color:#fff3d1}
+.visual span.num sup{font-size:30px;color:var(--gold);margin-left:6px}
+.work-body{padding:22px 24px 24px}
+.work-body h3{font:600 21px var(--serif);margin:0 0 8px}
+.work-body p{margin:0;color:var(--muted);font-size:14.5px}
+.work .extra{background:var(--paper);color:var(--muted);border-top:1px solid var(--line)}
+.work .extra a{color:var(--gold-deep)}
+.work-note{margin:28px 0 0;font-size:13px;color:var(--muted)}
+
+/* education */
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.edu{padding:30px;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--radius)}
+.edu .t-type{display:block}
+.edu h3{font:600 23px var(--serif);margin:12px 0 8px}
+.edu p{margin:0;color:var(--muted)}
+
+/* contact */
+.contact{background:
+  radial-gradient(60% 80% at 90% 0,rgba(27,58,99,.9),transparent 60%),
+  radial-gradient(50% 60% at 0 100%,rgba(169,124,36,.22),transparent 60%),var(--navy-900);color:#fff;padding-block:120px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.contact h2{font:500 clamp(40px,5.2vw,72px)/1.05 var(--serif);letter-spacing:-.03em;margin:20px 0 24px}
+.contact h2 em{font-style:italic;color:var(--gold);font-weight:400}
+.contact-copy p{color:#c1cde0;max-width:480px;font-size:17px}
+.direct{display:inline-flex;align-items:center;gap:12px;margin-top:18px;padding:14px 20px;border:1px solid rgba(227,185,95,.4);border-radius:14px;font-weight:700;color:var(--gold-soft);overflow-wrap:anywhere;transition:background .2s}
+.direct:hover{background:rgba(227,185,95,.1)}
+.form-card{position:relative;background:var(--paper);color:var(--ink);border-radius:24px;padding:36px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:1px solid rgba(227,185,95,.5)}
+.form-card::before{content:"";position:absolute;left:36px;right:36px;top:0;height:4px;border-radius:0 0 6px 6px;background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-soft))}
+.form-card h3{font:600 28px var(--serif);margin:6px 0 4px}
+.form-card .sub{margin:0 0 6px;color:var(--muted);font-size:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:12px;font-weight:800;letter-spacing:.04em;margin:16px 0 6px;color:var(--navy-700)}
+input,select,textarea{width:100%;padding:13px 14px;border-radius:11px;border:1px solid #d5cdb9;background:#fff;color:var(--ink);font-size:15px;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold-deep);box-shadow:0 0 0 4px rgba(227,185,95,.3)}
+textarea{resize:vertical;min-height:120px}
+.honeypot{position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0}
+.form-card .btn{width:100%;margin-top:22px}
+.privacy{font-size:12px;color:var(--muted);margin:14px 0 0}
+.form-status{display:none;margin-top:16px;padding:14px 16px;border-radius:12px;font-size:14px;font-weight:600}
+.form-status.ok{display:block;background:#e7f4e4;color:#1f5a2a;border:1px solid #b6dcb0}
+.form-status.err{display:block;background:#fbe9e7;color:#8a2a1d;border:1px solid #efbdb5}
+
+/* footer */
+.footer{background:var(--navy-950);color:#8fa1ba;padding:34px 0;font-size:13px;border-top:1px solid rgba(227,185,95,.25)}
+.footer-in{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.footer a:hover{color:var(--gold)}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.js .reveal.in{opacity:1;transform:none}
+
+/* ripple canvas */
+#ripple{position:fixed;inset:0;width:100vw;height:100vh;z-index:99999;pointer-events:none}
+
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:20px;padding-block:70px 80px}
+  .hero-art{min-height:480px}
+  .expertise-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{gap:44px;grid-template-columns:1fr}
+  .work-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:800px){
+  .contact-grid{grid-template-columns:1fr;gap:38px}
+}
+@media(max-width:760px){
+  .container{width:min(100% - 36px,1180px)}
+  .nav{height:68px}
+  .menu-toggle{display:flex}
+  .nav-links{display:none;position:absolute;left:0;right:0;top:68px;flex-direction:column;align-items:stretch;gap:4px;padding:16px 18px 22px;
+    background:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 1px,transparent 1px 7px),#06101d;border-bottom:1px solid rgba(227,185,95,.45)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:14px 12px}
+  .nav-links .nav-cta{margin:8px 0 0;text-align:center;justify-content:center}
+  .logo-text{display:none}
+  .section{padding-block:80px}
+  .section h2{margin-bottom:36px}
+  .hero-meta{gap:26px}
+  .chip.c1{left:0}.chip.c2{right:0}
+  .ring.r1{width:360px;height:360px}.ring.r2{width:300px;height:300px}
+  .expertise-grid,.work-grid,.edu-grid,.row{grid-template-columns:1fr}
+  .skill summary{min-height:270px}
+  .exp-intro{display:block}
+  .t-item{margin-left:26px;padding:20px}
+  .t-item::before{left:-36px}
+  .form-card{padding:26px 20px}
+  .about-stats{grid-template-columns:1fr}
+  .employer{right:10px;bottom:10px;padding:7px 11px 7px 8px}
+  .employer-logo{width:32px;height:32px}
+  .employer-text strong{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .watermark{animation:none;opacity:.1}.employer{animation:none}
+  .ring.r1,.chip,.ticker-track{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  #ripple{display:none}
+}
+</style>
 </head>
 <body>
-  <div class="fixed-watermark" aria-hidden="true">M<span>.</span>M</div>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="top">
-    <nav class="nav container" aria-label="Main navigation">
-      <a class="logo" href="#top" aria-label="Monty Morgan home">M<span>.</span>M</a>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
-      <div class="nav-links" id="nav-links">
-        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#contact" class="nav-contact">Let's Connect <span aria-hidden="true">↗</span></a>
-      </div>
-    </nav>
-  </header>
+<div class="watermark on-dark" aria-hidden="true">M<i>.</i>M</div>
+<canvas id="ripple" aria-hidden="true"></canvas>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <main id="main">
-    <section class="hero container" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> SALES • OUTREACH • VIRTUAL SUPPORT</p>
+<a class="employer" href="https://nsolbpo.com/" target="_blank" rel="noopener noreferrer" aria-label="Currently working with NSOL BPO">
+  <span class="employer-logo" id="employer-logo"><img src="assets/nsol-logo.png" alt="" width="38" height="38"><span>NSOL</span></span>
+  <span class="employer-text"><small>Currently with</small><strong>NSOL BPO</strong></span>
+</a>
+
+<header class="site-header" id="top" data-tone="dark">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="logo" href="#top" aria-label="Monty Morgan — home">
+      <span class="mono" aria-hidden="true"><b>M<i>.</i>M</b></span>
+      <span class="logo-text"><strong>Monty Morgan</strong><small>SALES · VIRTUAL SUPPORT</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#work">Work</a>
+      <a href="#contact" class="nav-cta">Let's Connect <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" data-tone="dark" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span>SALES · OUTREACH · VIRTUAL SUPPORT</p>
         <h1 id="hero-title">Conversations<br>that create <em>opportunity.</em></h1>
-        <p class="hero-description">I'm <strong>Monty Morgan</strong>, a sales closer and cold-calling professional with nearly five years of experience across different companies and services. I currently work as an Executive Virtual Assistant at NSOL BPO.</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#experience">Explore My Experience <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#contact">Get in Touch</a></div>
-        <div class="hero-meta"><span><strong>~5 years</strong><small>Professional experience</small></span><span><strong>Sales + VA</strong><small>Cross-functional support</small></span></div>
+        <p class="lede">I'm <strong>Monty Morgan</strong>, a sales closer and cold-calling professional with nearly five years of experience across different companies and services. I currently work as an Executive Virtual Assistant at NSOL BPO.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#experience">Explore My Experience <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>~5 years</strong><small>Professional experience</small></span>
+          <span><strong>Sales + VA</strong><small>Cross-functional support</small></span>
+        </div>
       </div>
-      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="circle-label">COMMUNICATION<br><span>with purpose.</span></div><span class="orbit-caption">MONTY MORGAN / SALES & SUPPORT</span></div>
-    </section>
-    <section class="ticker" aria-label="Professional focus"><div class="ticker-inner">COLD CALLING <span>✳</span> SALES CLOSING <span>✳</span> LEAD FOLLOW-UP <span>✳</span> CRM TOOLS <span>✳</span> VIRTUAL ASSISTANCE <span>✳</span> CREATIVE SUPPORT</div></section>
+      <div class="hero-art reveal">
+        <div class="ring r1" aria-hidden="true"></div><div class="ring r2" aria-hidden="true"></div>
+        <!-- PHOTO: upload your picture to the repo root as photo.jpg and it appears here automatically. -->
+        <div class="photo-frame" id="photo-frame">
+          <div class="photo-inner">
+            <img src="photo.jpg" alt="Portrait of Monty Morgan" width="680" height="850">
+            <div class="photo-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 200 220" fill="currentColor"><circle cx="100" cy="78" r="44"/><path d="M14 220c0-52 38-84 86-84s86 32 86 84z"/></svg>
+              <strong>Your photo here</strong><span>ADD photo.jpg</span>
+            </div>
+          </div>
+        </div>
+        <div class="chip c1"><span class="ic">☎</span><span>Cold Calling<small>Sales closer</small></span></div>
+        <div class="chip c2"><span class="ic">✦</span><span>Executive VA<small>NSOL BPO</small></span></div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section section-dark" id="expertise"><div class="container"><div class="section-heading"><span class="kicker">02 / WHAT I DO</span><h2>Versatile skills.<br><em>Practical impact.</em></h2></div><div class="expertise-grid"><a class="skill-card service-link" href="sales-cold-calling.html"><span class="skill-index">01</span><div class="card-icon">↗</div><h3>Sales & Cold Calling</h3><p>Outbound calling, customer conversations, sales follow-up, and closing-focused communication.</p><span class="skill-tag">CORE STRENGTH</span><span class="service-more">Explore service ↗</span></a><a class="skill-card service-link" href="crm-lead-management.html"><span class="skill-index">02</span><div class="card-icon">◎</div><h3>CRM & Lead Management</h3><p>Working familiarity with BoldTrail CRM, Lofty CRM, and VICIdial for sales and calling workflows.</p><span class="skill-tag">TOOLS & SYSTEMS</span><span class="service-more">Explore service ↗</span></a><a class="skill-card service-link" href="creative-content.html"><span class="skill-index">03</span><div class="card-icon">✳</div><h3>Creative Content</h3><p>Canva social graphics and intermediate-level reel and video editing for digital content.</p><span class="skill-tag">CREATIVE SUPPORT</span><span class="service-more">Explore service ↗</span></a><a class="skill-card service-link" href="virtual-assistance.html"><span class="skill-index">04</span><div class="card-icon">⌘</div><h3>Virtual Assistance</h3><p>Executive VA support, coordination, task execution, and day-to-day digital workflows.</p><span class="skill-tag">CURRENT ROLE</span><span class="service-more">Explore service ↗</span></a></div><div class="toolkit"><span class="toolkit-label">MY TOOLKIT</span><div class="tool-chips"><span>BoldTrail CRM</span><span>Lofty CRM</span><span>VICIdial</span><span>Canva</span><span>Video Editing</span><span>MS Excel</span><span>HTML (Basic)</span><span>CSS (Basic)</span></div></div></div></section>
+  <section class="ticker" data-tone="dark" aria-label="Professional focus">
+    <div class="ticker-track">
+      <span>COLD CALLING</span><span class="sep">✦</span><span>SALES CLOSING</span><span class="sep">✦</span><span>LEAD FOLLOW-UP</span><span class="sep">✦</span><span>CRM TOOLS</span><span class="sep">✦</span><span>VIRTUAL ASSISTANCE</span><span class="sep">✦</span><span>CREATIVE SUPPORT</span><span class="sep">✦</span>
+      <span>COLD CALLING</span><span class="sep">✦</span><span>SALES CLOSING</span><span class="sep">✦</span><span>LEAD FOLLOW-UP</span><span class="sep">✦</span><span>CRM TOOLS</span><span class="sep">✦</span><span>VIRTUAL ASSISTANCE</span><span class="sep">✦</span><span>CREATIVE SUPPORT</span><span class="sep">✦</span>
+    </div>
+  </section>
 
+  <section class="section" id="about" data-tone="light">
+    <div class="container">
+      <div class="reveal"><span class="kicker">01 / ABOUT ME</span>
+      <h2>A people-first approach<br>to <em>getting things done.</em></h2></div>
+      <div class="about-grid">
+        <p class="lead reveal">I work where communication, consistency, and <em>execution</em> meet.</p>
+        <div class="about-text reveal">
+          <p>My background is in professional cold calling and sales closing, with experience supporting a variety of products and services across different organizations.</p>
+          <p>At NSOL BPO, I work as an Executive Virtual Assistant. Alongside sales and outreach, I use CRM platforms and support creative tasks such as Canva social posts and intermediate-level reel editing.</p>
+          <p>I'm also developing my HTML and CSS skills as I expand into web development.</p>
+          <div class="about-stats">
+            <div><strong>~5 yrs</strong><small>In sales &amp; support</small></div>
+            <div><strong>3 CRMs</strong><small>&amp; dialer tools</small></div>
+            <div><strong>Team lead</strong><small>Experience</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section container" id="about"><div class="section-heading"><span class="kicker">01 / ABOUT ME</span><h2>A people-first approach<br>to <em>getting things done.</em></h2></div><div class="about-grid"><p class="lead">I work where communication, consistency, and execution meet.</p><div class="about-text"><p>My background is in professional cold calling and sales closing, with experience supporting a variety of products and services across different organizations.</p><p>At NSOL BPO, I work as an Executive Virtual Assistant. Alongside sales and outreach, I use CRM platforms and support creative tasks such as Canva social posts and intermediate-level reel editing.</p><p>I'm also developing my HTML and CSS skills as I expand into web development.</p></div></div></section>
+  <section class="section tone-dark" id="expertise" data-tone="dark">
+    <div class="container">
+      <div class="reveal"><span class="kicker">02 / WHAT I DO</span>
+      <h2>Versatile skills.<br><em>Practical impact.</em></h2></div>
+      <div class="expertise-grid">
+        <details class="skill reveal"><summary><span class="idx">01</span><div class="ico">↗</div><h3>Sales &amp; Cold Calling</h3><p>Outbound calling, customer conversations, sales follow-up, and closing-focused communication.</p><span class="tag">CORE STRENGTH</span><span class="more">Explore service</span></summary><div class="extra"><p>My approach starts with learning the offer and audience, asking relevant questions and maintaining clear notes and next steps.</p><a href="#contact">Discuss this service ↗</a></div></details>
+        <details class="skill reveal"><summary><span class="idx">02</span><div class="ico">◎</div><h3>CRM &amp; Lead Management</h3><p>Working familiarity with BoldTrail CRM, Lofty CRM, and VICIdial for sales and calling workflows.</p><span class="tag">TOOLS &amp; SYSTEMS</span><span class="more">Explore service</span></summary><div class="extra"><p>I have working familiarity with BoldTrail CRM, Lofty CRM and VICIdial, and can adapt to established team processes.</p><a href="#contact">Discuss this service ↗</a></div></details>
+        <details class="skill reveal"><summary><span class="idx">03</span><div class="ico">✦</div><h3>Creative Content</h3><p>Canva social graphics and intermediate-level reel and video editing for digital content.</p><span class="tag">CREATIVE SUPPORT</span><span class="more">Explore service</span></summary><div class="extra"><p>I create practical social content to help teams communicate clearly and consistently.</p><a href="#contact">Discuss this service ↗</a></div></details>
+        <details class="skill reveal"><summary><span class="idx">04</span><div class="ico">⌘</div><h3>Virtual Assistance</h3><p>Executive VA support, coordination, task execution, and day-to-day digital workflows.</p><span class="tag">CURRENT ROLE</span><span class="more">Explore service</span></summary><div class="extra"><p>My current role at NSOL BPO involves supporting day-to-day workflows and keeping assigned work moving.</p><a href="#contact">Discuss this service ↗</a></div></details>
+      </div>
+      <div class="toolkit reveal"><span class="toolkit-label">MY TOOLKIT</span>
+        <div class="chips"><span>BoldTrail CRM</span><span>Lofty CRM</span><span>VICIdial</span><span>Canva</span><span>Video Editing</span><span>MS Excel</span><span>HTML (Basic)</span><span>CSS (Basic)</span></div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section" id="experience" data-tone="light">
+    <div class="container">
+      <div class="reveal"><span class="kicker">03 / CAREER PATH</span>
+      <h2>Experience across<br><em>different industries.</em></h2></div>
+      <div class="exp-intro reveal"><p>Nearly five years of professional experience, including sales closer and team leader roles across previous companies, as well as my current executive virtual assistant position.</p></div>
+      <div class="timeline">
+        <a class="t-item reveal" href="https://nsolbpo.com/" target="_blank" rel="noopener noreferrer"><div><span class="t-type">CURRENT ROLE</span><h3>NSOL BPO</h3><p>Executive Virtual Assistant</p></div><span class="t-arrow" aria-hidden="true">↗</span></a>
+        <a class="t-item reveal" href="https://touchstonebpo.com/" target="_blank" rel="noopener noreferrer"><div><span class="t-type">PREVIOUS EXPERIENCE</span><h3>Touchstone</h3><p>Sales Closer / Team Leader experience</p></div><span class="t-arrow" aria-hidden="true">↗</span></a>
+        <a class="t-item reveal" href="https://axxonbpo.com/" target="_blank" rel="noopener noreferrer"><div><span class="t-type">PREVIOUS EXPERIENCE</span><h3>Axxon BPO</h3><p>Sales Closer / Team Leader experience</p></div><span class="t-arrow" aria-hidden="true">↗</span></a>
+        <a class="t-item reveal" href="https://errandsservices.com/" target="_blank" rel="noopener noreferrer"><div><span class="t-type">PREVIOUS EXPERIENCE</span><h3>Errand Services</h3><p>Sales Closer / Team Leader experience</p></div><span class="t-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
 
-    <section class="section container" id="experience"><div class="section-heading"><span class="kicker">03 / CAREER PATH</span><h2>Experience across<br><em>different industries.</em></h2></div><div class="experience-intro"><p>Nearly five years of professional experience, including sales closer and team leader roles across previous companies, as well as my current executive virtual assistant position.</p><span class="muted">Experience in sales closing and team leadership across multiple organizations.</span></div><div class="timeline"><article class="timeline-item"><span class="timeline-bullet"></span><div><span class="timeline-type">CURRENT ROLE</span><h3><a href="https://nsolbpo.com/" target="_blank" rel="noopener noreferrer">NSOL BPO ↗</a></h3><a class="employer-logo" href="https://nsolbpo.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit NSOL BPO website (opens in a new tab)"><img src="assets/nsol-bpo.png" alt="NSOL BPO — Extending Limitless Beliefs" width="259" height="68"></a><p>Executive Virtual Assistant</p></div><span class="timeline-arrow">↗</span></article><article class="timeline-item"><span class="timeline-bullet"></span><div><span class="timeline-type">PREVIOUS EXPERIENCE</span><h3><a href="https://touchstonebpo.com/" target="_blank" rel="noopener noreferrer">Touchstone ↗</a></h3><p>Sales Closer / Team Leader experience</p></div><span class="timeline-arrow">↗</span></article><article class="timeline-item"><span class="timeline-bullet"></span><div><span class="timeline-type">PREVIOUS EXPERIENCE</span><h3><a href="https://axxonbpo.com/" target="_blank" rel="noopener noreferrer">Axxon BPO ↗</a></h3><p>Sales Closer / Team Leader experience</p></div><span class="timeline-arrow">↗</span></article><article class="timeline-item"><span class="timeline-bullet"></span><div><span class="timeline-type">PREVIOUS EXPERIENCE</span><h3><a href="https://errandsservices.com/" target="_blank" rel="noopener noreferrer">Errand Services ↗</a></h3><p>Sales Closer / Team Leader experience</p></div><span class="timeline-arrow">↗</span></article></div></section>
+  <section class="section tone-alt" id="work" data-tone="light">
+    <div class="container">
+      <div class="reveal"><span class="kicker">04 / SELECTED CAPABILITIES</span>
+      <h2>What I can <em>bring to a team.</em></h2></div>
+      <p class="work-intro reveal">A snapshot of the work I support. These are capability areas, not claims about specific completed client projects.</p>
+      <div class="work-grid">
+        <details class="work reveal"><summary><div class="visual v1"><span class="lbl">OUTREACH / SALES</span><span class="num">01<sup>↗</sup></span></div><div class="work-body"><h3>Sales Conversations</h3><p>Cold calling, qualifying interest, follow-ups, and sales-focused communication.</p></div></summary><div class="extra"><p>I help businesses start conversations with potential customers, understand their needs and move toward a clear next step. My process emphasizes offer knowledge, relevant questions and timely follow-up.</p><a href="#contact">Get in touch ↗</a></div></details>
+        <details class="work reveal"><summary><div class="visual v2"><span class="lbl">SYSTEMS / ORGANIZATION</span><span class="num">02<sup>↗</sup></span></div><div class="work-body"><h3>CRM &amp; VA Workflows</h3><p>Using digital tools to support lead management and executive assistance.</p></div></summary><div class="extra"><p>I support lead records, sales follow-up coordination and executive assistance using the tools and processes established by the team.</p><a href="#contact">Get in touch ↗</a></div></details>
+        <details class="work reveal"><summary><div class="visual v3"><span class="lbl">DESIGN / EDITING</span><span class="num">03<sup>↗</sup></span></div><div class="work-body"><h3>Social Content Support</h3><p>Canva designs and reel editing to help teams communicate visually.</p></div></summary><div class="extra"><p>I create Canva graphics and edit short reels at an intermediate level, focusing on clear messaging and consistent presentation.</p><a href="#contact">Get in touch ↗</a></div></details>
+      </div>
+      <p class="work-note reveal">Real work samples, portfolio screenshots, and verified results can be added here later, with client approval.</p>
+    </div>
+  </section>
 
-    <section class="section section-work" id="work"><div class="container"><div class="section-heading"><span class="kicker">04 / SELECTED CAPABILITIES</span><h2>What I can <em>bring to a team.</em></h2></div><p class="work-intro">A snapshot of the work I support. </p><div class="work-grid"><a class="work-card capability-link" href="sales-conversations.html"><div class="work-visual visual-call"><span class="work-visual-label">OUTREACH / SALES</span><span class="work-mark">01<span>↗</span></span></div><div class="work-content"><h3>Sales Conversations</h3><p>Cold calling, qualifying interest, follow-ups, and sales-focused communication.</p></div><span class="capability-more">See how I can help ↗</span></a><a class="work-card capability-link" href="crm-va-workflows.html"><div class="work-visual visual-crm"><span class="work-visual-label">SYSTEMS / ORGANIZATION</span><span class="work-mark">02<span>↗</span></span></div><div class="work-content"><h3>CRM & VA Workflows</h3><p>Using digital tools to support lead management and executive assistance.</p></div><span class="capability-more">See how I can help ↗</span></a><a class="work-card capability-link" href="social-content-support.html"><div class="work-visual visual-creative"><span class="work-visual-label">DESIGN / EDITING</span><span class="work-mark">03<span>↗</span></span></div><div class="work-content"><h3>Social Content Support</h3><p>Canva designs and reel editing to help teams communicate visually.</p></div><span class="capability-more">See how I can help ↗</span></a></div><p class="work-note">Explore each area to see how I work, the experience I bring, and how we can get started.</p></div></section>
+  <section class="section" id="education" data-tone="light">
+    <div class="container">
+      <div class="reveal"><span class="kicker">05 / CONTINUED LEARNING</span>
+      <h2>Always <em>improving.</em></h2></div>
+      <div class="edu-grid">
+        <div class="edu reveal"><span class="t-type">PROFESSIONAL DEVELOPMENT</span><h3>Sales, leadership &amp; digital skills</h3><p>Continuing to strengthen client communication, sales processes and digital support skills.</p></div>
+        <div class="edu reveal"><span class="t-type">CURRENT LEARNING</span><h3>Frontend Foundations</h3><p>Building foundational knowledge of HTML and CSS.</p></div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section container" id="education"><div class="section-heading"><span class="kicker">05 / CONTINUED LEARNING</span><h2>Always <em>improving.</em></h2></div><div class="education-grid"><div><span class="small-label">PROFESSIONAL DEVELOPMENT</span><h3>Sales, leadership & digital skills</h3><p>Continuing to strengthen client communication, sales processes and digital support skills.</p></div><div><span class="small-label">CURRENT LEARNING</span><h3>Frontend Foundations</h3><p>Building foundational knowledge of HTML and CSS.</p></div></div></section>
+  <section class="contact" id="contact" data-tone="dark">
+    <div class="container contact-grid">
+      <div class="contact-copy reveal">
+        <span class="kicker" style="color:var(--gold)">06 / LET'S CONNECT</span>
+        <h2>Good work starts<br>with a <em>conversation.</em></h2>
+        <p>Tell me a little about yourself and the support you need. I'll get back to you by email.</p>
+        <a class="direct" href="mailto:montymorgan.nsolbpo@gmail.com">✉ montymorgan.nsolbpo@gmail.com</a>
+      </div>
+      <form class="form-card reveal" id="contact-form" action="https://formsubmit.co/montymorgan.nsolbpo@gmail.com" method="POST">
+        <h3>Send a message</h3>
+        <p class="sub">Share a few details and I'll reply personally.</p>
+        <input type="hidden" name="_subject" value="New website enquiry — Monty Morgan Portfolio">
+        <input type="hidden" name="_template" value="box">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse" value="Hi, thank you for reaching out! I've received your message and will reply to you by email as soon as I can. — Monty Morgan">
+        <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="row">
+          <div><label for="fn">First name *</label><input id="fn" name="First Name" required maxlength="80" autocomplete="given-name" placeholder="Jane"></div>
+          <div><label for="ln">Last name *</label><input id="ln" name="Last Name" required maxlength="80" autocomplete="family-name" placeholder="Doe"></div>
+        </div>
+        <label for="em">Email address *</label>
+        <input id="em" name="email" type="email" required autocomplete="email" placeholder="you@company.com">
+        <div class="row">
+          <div><label for="ph">Phone (optional)</label><input id="ph" name="Phone" type="tel" autocomplete="tel" placeholder="+1 555 000 0000"></div>
+          <div><label for="sv">Interested in</label>
+            <select id="sv" name="Service Needed"><option>Sales &amp; Cold Calling</option><option>CRM &amp; Lead Management</option><option>Creative Content</option><option>Virtual Assistance</option><option>Something else</option></select></div>
+        </div>
+        <label for="ms">Your message *</label>
+        <textarea id="ms" name="Message" required maxlength="3000" placeholder="Tell me about your project or how I can help…"></textarea>
+        <button class="btn btn-gold" type="submit">Send Message <span aria-hidden="true">↗</span></button>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        <p class="privacy">Your details are sent securely by email via FormSubmit and used only to respond to your enquiry.</p>
+      </form>
+    </div>
+  </section>
+</main>
 
-    <section class="contact-section" id="contact"><div class="container contact-grid"><div class="contact-inner"><span class="kicker">06 / LET'S CONNECT</span><h2>Good work starts<br>with a <em>conversation.</em></h2><p>Tell me a little about yourself and the support you need. I'll get back to you by email.</p><a class="direct-email" href="mailto:montymorgan.nsolbpo@gmail.com">montymorgan.nsolbpo@gmail.com ↗</a></div>
-    <form class="contact-form" action="https://formsubmit.co/montymorgan.nsolbpo@gmail.com" method="POST">
-      <h3>Let's connect</h3><p class="form-intro">Share your details. Let's see how I can help.</p>
-      <input type="hidden" name="_subject" value="New portfolio enquiry — Monty Morgan"><input type="hidden" name="_template" value="table"><input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <div class="form-row"><div><label for="first-name">First name <span>*</span></label><input id="first-name" name="first_name" placeholder="First name" autocomplete="given-name" maxlength="80" required></div><div><label for="last-name">Last name <span>*</span></label><input id="last-name" name="last_name" placeholder="Last name" autocomplete="family-name" maxlength="80" required></div></div>
-      <label for="email">Email address <span>*</span></label><input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" maxlength="254" required>
-      <label for="phone">Phone number <small>(optional)</small></label><input id="phone" type="tel" name="phone" placeholder="Phone number (optional)" autocomplete="tel" maxlength="40">
-      <label for="message">Your message <span>*</span></label><textarea id="message" name="message" placeholder="Tell me about your project or how I can help…" rows="6" maxlength="10000" required></textarea>
-      <p class="form-privacy">Your details will be processed by FormSubmit and emailed to Monty so he can respond to your enquiry.</p><button class="btn btn-primary" type="submit">Send Message <span aria-hidden="true">↗</span></button>
-    </form></div></section>
-  </main>
-  <footer class="footer"><div class="container footer-inner"><a class="logo" href="#top">M<span>.</span>M</a><span>© <span id="year"></span> Monty Morgan. Built with intention.</span><a href="#top">Back to top ↑</a></div></footer>
-  <script src="script.js"></script>
+<footer class="footer" data-tone="dark">
+  <div class="container footer-in">
+    <a class="logo" href="#top" aria-label="Back to top"><span class="mono" aria-hidden="true"><b>M<i>.</i>M</b></span></a>
+    <span>© <span id="year"></span> Monty Morgan. Built with intention.</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* Mobile menu */
+(()=>{
+  const t=document.getElementById('menu-toggle'),l=document.getElementById('nav-links');
+  t.addEventListener('click',()=>{const o=l.classList.toggle('open');t.setAttribute('aria-expanded',String(o));t.setAttribute('aria-label',o?'Close navigation':'Open navigation')});
+  l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{l.classList.remove('open');t.setAttribute('aria-expanded','false')}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+
+/* Photo + employer logo: show only if the image file exists */
+(()=>{
+  const probe=(src,el)=>{const i=new Image();i.onload=()=>el.classList.add(el.id==='photo-frame'?'has-photo':'has-logo');i.src=src};
+  probe('photo.jpg',document.getElementById('photo-frame'));
+  probe('assets/nsol-logo.png',document.getElementById('employer-logo'));
+})();
+
+/* Scroll reveal + active nav link */
+(()=>{
+  const items=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    items.forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
+  }else items.forEach(el=>el.classList.add('in'));
+  const links=[...document.querySelectorAll('.nav-links a[href^="#"]:not(.nav-cta)')];
+  const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+  const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.remove('active'));const a=map.get(e.target.id);if(a)a.classList.add('active')}}),{rootMargin:'-45% 0px -50% 0px'});
+  ['about','expertise','experience','work'].forEach(id=>{const s=document.getElementById(id);if(s)so.observe(s)});
+})();
+
+/* Tone detection shared by watermark and ripple: dark vs light section under a point */
+const toneAt=(x,y)=>{const el=document.elementFromPoint(x,y);const s=el&&el.closest('[data-tone]');return s?s.dataset.tone:'light'};
+
+/* Section-aware M.M watermark (slow, steady blink — CSS keeps it in sync with the NSOL badge) */
+(()=>{
+  const m=document.querySelector('.watermark');let q=false;
+  const upd=()=>{q=false;const d=toneAt(innerWidth/2,innerHeight/2)==='dark';m.classList.toggle('on-dark',d);m.classList.toggle('on-light',!d)};
+  const sch=()=>{if(!q){q=true;requestAnimationFrame(upd)}};
+  addEventListener('scroll',sch,{passive:true});addEventListener('resize',sch);addEventListener('load',sch);upd();
+})();
+
+/* Water ripple cursor: soft glow, layered rings, big shockwave on click; adapts colour to the section underneath */
+(()=>{
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!matchMedia('(pointer: fine)').matches)return;
+  const c=document.getElementById('ripple'),x=c.getContext('2d');if(!x)return;
+  let w,h,dpr,active=false,last=0,tone='dark';
+  const p={x:0,y:0},g={x:0,y:0};let waves=[];
+  const resize=()=>{dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0)};
+  addEventListener('resize',resize,{passive:true});resize();
+  const add=(px,py,power,life)=>{waves.push({x:px,y:py,t:performance.now(),power,life,tone});if(waves.length>40)waves.shift()};
+  addEventListener('pointermove',e=>{
+    if(e.pointerType==='touch')return;
+    p.x=e.clientX;p.y=e.clientY;if(!active){g.x=p.x;g.y=p.y}active=true;
+    const n=performance.now();
+    if(n-last>70){tone=toneAt(p.x,p.y);add(p.x,p.y,.7,1200);last=n}
+  },{passive:true});
+  addEventListener('pointerdown',e=>{if(e.pointerType==='touch')return;tone=toneAt(e.clientX,e.clientY);add(e.clientX,e.clientY,1.7,1500)},{passive:true});
+  document.addEventListener('pointerout',e=>{if(!e.relatedTarget)active=false});addEventListener('blur',()=>{active=false});
+  const rgb=t=>t==='dark'?'196,230,255':'20,92,160';
+  const ease=k=>1-Math.pow(1-k,3);
+  (function frame(t){
+    x.clearRect(0,0,w,h);
+    if(active){
+      g.x+=(p.x-g.x)*.16;g.y+=(p.y-g.y)*.16;
+      const col=rgb(tone),r=x.createRadialGradient(g.x,g.y,0,g.x,g.y,130);
+      r.addColorStop(0,`rgba(${col},${tone==='dark'?.42:.22})`);r.addColorStop(.35,`rgba(${col},${tone==='dark'?.18:.09})`);r.addColorStop(1,`rgba(${col},0)`);
+      x.fillStyle=r;x.fillRect(g.x-130,g.y-130,260,260);
+    }
+    waves=waves.filter(q=>t-q.t<q.life);
+    for(const q of waves){
+      const k0=(t-q.t)/q.life,col=rgb(q.tone),reach=q.power>1?170:96;
+      for(let i=0;i<3;i++){
+        const d=i*.14;if(k0<d)continue;
+        const k=(k0-d)/(1-d),a=(1-k)*(1-k)*q.power*(i===0?.62:i===1?.3:.16);
+        x.beginPath();x.arc(q.x,q.y,6+ease(k)*reach*(1-i*.2),0,6.2832);
+        x.strokeStyle=`rgba(${col},${Math.min(a,.85)})`;x.lineWidth=i===0?1.7:1;x.stroke();
+      }
+    }
+    requestAnimationFrame(frame);
+  })(performance.now());
+})();
+
+/* Contact form: send in place, fall back to a normal submit if anything fails */
+(()=>{
+  const f=document.getElementById('contact-form'),s=document.getElementById('form-status');
+  f.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const b=f.querySelector('button[type="submit"]'),label=b.innerHTML;
+    b.disabled=true;b.textContent='Sending…';s.className='form-status';s.textContent='';
+    try{
+      const r=await fetch('https://formsubmit.co/ajax/montymorgan.nsolbpo@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)});
+      const j=await r.json();
+      if(r.ok&&String(j.success)!=='false'){f.reset();s.className='form-status ok';s.textContent='Thank you! Your message has been sent. I will reply to you by email soon.'}
+      else throw new Error(j.message||'failed');
+    }catch(err){
+      s.className='form-status err';s.textContent='Something went wrong. Please email montymorgan.nsolbpo@gmail.com directly.';
+    }finally{b.disabled=false;b.innerHTML=label}
+  });
+})();
+</script>
 </body>
 </html>
