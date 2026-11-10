@@ -21,14 +21,16 @@ body{isolation:isolate}.fixed-watermark{position:fixed;left:50%;top:50%;transfor
 @keyframes watermark-heartbeat{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:var(--watermark-low)}14%{transform:translate(-50%,-50%) scale(1.065);opacity:var(--watermark-high)}27%{transform:translate(-50%,-50%) scale(1.015);opacity:var(--watermark-low)}40%{transform:translate(-50%,-50%) scale(1.045);opacity:var(--watermark-high)}60%{transform:translate(-50%,-50%) scale(1);opacity:var(--watermark-low)}}
 @media(prefers-reduced-motion:reduce){.fixed-watermark{animation:none;transition:none;opacity:var(--watermark-low);will-change:auto}}
 
-/* Soft water ripple cursor overlay */
+/* Water ripple cursor effect */
 #water-ripple-canvas {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999 !important;
   pointer-events: none;
-  z-index: 9999;
+  display: block;
 }
 
 @media (prefers-reduced-motion: reduce) {
