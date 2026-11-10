@@ -21,20 +21,51 @@ body{isolation:isolate}.fixed-watermark{position:fixed;left:50%;top:50%;transfor
 @keyframes watermark-heartbeat{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:var(--watermark-low)}14%{transform:translate(-50%,-50%) scale(1.065);opacity:var(--watermark-high)}27%{transform:translate(-50%,-50%) scale(1.015);opacity:var(--watermark-low)}40%{transform:translate(-50%,-50%) scale(1.045);opacity:var(--watermark-high)}60%{transform:translate(-50%,-50%) scale(1);opacity:var(--watermark-low)}}
 @media(prefers-reduced-motion:reduce){.fixed-watermark{animation:none;transition:none;opacity:var(--watermark-low);will-change:auto}}
 
-/* Water ripple cursor effect */
+
+/* ==========================================
+   MONTY MORGAN PORTFOLIO
+   WATER RIPPLE CURSOR ANIMATION
+   ========================================== */
+
 #water-ripple-canvas {
   position: fixed !important;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100vw !important;
+  height: 100vh !important;
+
+  /* Display animation above page content */
   z-index: 99999 !important;
-  pointer-events: none;
-  display: block;
+
+  /* Allow buttons and links to remain clickable */
+  pointer-events: none !important;
+
+  /* Keep the canvas transparent */
+  background: transparent !important;
+
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  /* Avoid layout changes */
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+
+  /* Prevent unwanted scrolling */
+  overflow: hidden !important;
 }
 
+/* Prevent selecting the effect as page content */
+#water-ripple-canvas::selection {
+  background: transparent;
+}
+
+/* Accessibility: respect reduced motion settings */
 @media (prefers-reduced-motion: reduce) {
   #water-ripple-canvas {
-    display: none;
+    display: none !important;
   }
 }
+
