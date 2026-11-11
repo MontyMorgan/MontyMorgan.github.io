@@ -1,27 +1,30 @@
-# Monty Morgan — Portfolio
+# Monty Morgan — Monochrome Portfolio
 
-Single-file GitHub Pages site. Everything (HTML, CSS, JS) lives in `index.html`.
+A self-contained static `index.html` (CSS and JavaScript embedded) with three image assets in `assets/`.
 
-Live at **https://montymorgan.github.io/**
+## Publish on GitHub Pages
 
-## Add your own images (optional, all drop-in)
+1. Back up your existing repository before replacing its content.
+2. Upload `index.html` and the complete `assets/` folder to the root of your GitHub Pages repository (for the root URL, repository name should be `MontyMorgan.github.io`).
+3. Settings → Pages → Deploy from branch → `main` → `/(root)`.
+4. After deployment, hard-refresh to clear old cached CSS/JS.
 
-Upload these to the repository root / `assets/` with the exact names below. The site shows them automatically; until then it shows a clean placeholder.
+No npm, build, or dependencies needed. The typefaces use Google Fonts, with fallback fonts if blocked. Everything else is local.
 
-| File | Purpose |
-| --- | --- |
-| `photo.jpg` | Your portrait in the hero (portrait orientation, about 800 x 1000 px works well) |
-| `hero.jpg` | Optional hero background photo (wide, about 1920 px, a dark or blurred image works best) |
-| `assets/nsol-logo.png` | NSOL BPO logo for the floating bottom-right badge (square or wide PNG; use the official file from your employer) |
+## Features
 
-## Contact form
+- Black/white/gray solid-color sections; transparent borderless header.
+- NSOL BPO prominent; no former employer names.
+- White signature monogram and animated center-page watermark. Center watermark gently pulses and changes contrast over light/dark sections.
+- Monochrome edited portrait supplied as `assets/monty-portrait.png`.
+- Silver water ripple on mouse movement and click. Skips touch-only devices and honors reduced-motion setting.
+- Working section navigation and mobile navigation menu.
+- FormSubmit contact form to `montymorgan.nsolbpo@gmail.com`; requires recipient email activation and testing. Do not assume messages arrive before testing.
 
-The form posts to FormSubmit and arrives as a formatted "box" email with an automatic thank-you reply to the sender. On the first ever submission FormSubmit emails an activation link to `montymorgan.nsolbpo@gmail.com`. Click it once, then test the form.
+## Editing
 
-## Publishing
+All markup, styles and scripts are within `index.html`. Search for `id="about"`, `id="services"`, `id="experience"`, `id="capabilities"`, `id="contact"` to find the section you want.
 
-Settings → Pages → Deploy from a branch → `main` → `/(root)`.
+## Note on images
 
-## Accessibility
-
-Reduced-motion settings disable the blinking, floating, marquee and ripple effects. Touch devices skip the mouse-only ripple.
+The portrait is an AI-edited monochrome design asset based on the supplied screenshot; check that it represents your appearance accurately before publishing. The monogram is traced from the supplied image and should only be used if you have permission from its rightsholder. The supplied NSOL BPO logo is presented with transparent background and monochrome CSS styling.
